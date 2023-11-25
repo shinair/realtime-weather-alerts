@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e9ae3b1bd22b6118c284d4176f031578 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+                <div style="position: fixed; 
+                            bottom: 100px; left: 50px; width: 120px; height: 90px; 
+                            border:2px solid grey; z-index:9999; font-size:12px;
+                            "
+                            >
+                            <b>
+                            <font color="red">
+                            &nbsp;                             
+                            Legend
+                            </font>
+                            </b>
+                            <br>
+                                 <img 
+                                     src="http://openweathermap.org/img/wn/01n@2x.png" alt="weather" height="40" width="40"
+                                 />
+                                  <b> <font color="green">
+                                  &nbsp; clear sky &nbsp;
+                                  </font>
+                                  </b?
+                                  <i 
+                                      class="icon" style="color:red">
+                                  </i>
+                            <br>
+                </div>
+                
+    
+            <div class="folium-map" id="map_e9ae3b1bd22b6118c284d4176f031578" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e9ae3b1bd22b6118c284d4176f031578 = L.map(
+                "map_e9ae3b1bd22b6118c284d4176f031578",
+                {
+                    center: [18.521428, 73.8544541],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2cba831e783e0fb4b71f60ceef504de0 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e9ae3b1bd22b6118c284d4176f031578);
+        
+    
+            var marker_515f5ed9314e625ebc6588eac1a59d0b = L.marker(
+                [18.491428, 73.7344541],
+                {"html": "\u003cdiv style=\"font-size:12pt\"\u003e-426.24 F\u003c/div\u003e"}
+            ).addTo(map_e9ae3b1bd22b6118c284d4176f031578);
+        
+    
+        var custom_icon_68629494ee9138324d9a847e526d52fa = L.icon({"iconAnchor": [22, 94], "iconSize": [100, 100], "iconUrl": "http://openweathermap.org/img/wn/01n@2x.png", "popupAnchor": [-3, -76]});
+        marker_515f5ed9314e625ebc6588eac1a59d0b.setIcon(custom_icon_68629494ee9138324d9a847e526d52fa);
+        
+    
+        var popup_a29215104ea9fba6504e3812db65dfda = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_efcdf81b264ba5c5a8c3b858f2318602 = $(`<div id="html_efcdf81b264ba5c5a8c3b858f2318602" style="width: 100.0%; height: 100.0%;">Temperature is -426.24F</div>`)[0];
+                popup_a29215104ea9fba6504e3812db65dfda.setContent(html_efcdf81b264ba5c5a8c3b858f2318602);
+            
+        
+
+        marker_515f5ed9314e625ebc6588eac1a59d0b.bindPopup(popup_a29215104ea9fba6504e3812db65dfda)
+        ;
+
+        
+    
+    
+        var popup_97d5286e1b98ce1788d574d26fba541b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e52f4f8efa83079cf1902434bfd1273 = $(`<div id="html_5e52f4f8efa83079cf1902434bfd1273" style="width: 100.0%; height: 100.0%;">-426.24</div>`)[0];
+                popup_97d5286e1b98ce1788d574d26fba541b.setContent(html_5e52f4f8efa83079cf1902434bfd1273);
+            
+        
+
+        map_e9ae3b1bd22b6118c284d4176f031578.bindPopup(popup_97d5286e1b98ce1788d574d26fba541b)
+        ;
+
+        
+    
+</script>
+</html>
