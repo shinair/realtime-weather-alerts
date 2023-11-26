@@ -12,7 +12,6 @@ b. Hourly forecast for 48 hours
 c. Daily forecast for 8 days
 d. Historical data for 40+ years back by timestamp
 e. National weather alerts
-
 Reference: https://openweathermap.org/api
 We will use any one of these combinations to be stored in the database.
 5. Documents in MongoDB consist of key-value pairs and are most suitable to store json
